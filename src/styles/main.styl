@@ -22,6 +22,24 @@ a
   &:hover
     color redLucy
 
+.enlace-botom
+  border-radius clamp(3px, 0.2vw, 0.3vw)
+  background purpleLucy
+  color yellowLucy
+  padding clamp(16px, 1vw, 1.1vw)
+  display flex
+  flex-direction row-reverse
+  align-items center
+  justify-content center
+  gap clamp(16px, 1vw, 1.1vw)
+  transition all 0.2s ease-in-out
+  letter-spacing 1pt
+  &:hover
+    color yellowLucy
+    font-weight 700
+  span
+    font-size inherit
+    
 /*Main*/
 body
   background-color yellowLucy
@@ -40,6 +58,17 @@ body
   height 100%
   display flex
   justify-content center
+
+#error
+  height 100%
+  display flex
+  justify-content center
+  flex-direction column
+  h1
+    font-size clamp(68px, 8vw, 8.1vw)
+    line-height 100%
+    text-align center
+    font-weight 1000
 
 #logo
   align-self center

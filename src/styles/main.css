@@ -18,6 +18,36 @@ a {
 a:hover {
   color: #e20312;
 }
+.enlace-botom {
+  border-radius: clamp(3px, 0.2vw, 0.3vw);
+  background: #251a89;
+  color: #ffea00;
+  padding: clamp(16px, 1vw, 1.1vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: clamp(16px, 1vw, 1.1vw);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1pt;
+}
+.enlace-botom:hover {
+  color: #ffea00;
+  font-weight: 700;
+}
+.enlace-botom span {
+  font-size: inherit;
+}
 /*Main*/
 body {
   background-color: #ffea00;
@@ -41,6 +71,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+#error {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#error h1 {
+  font-size: clamp(68px, 8vw, 8.1vw);
+  line-height: 100%;
+  text-align: center;
+  font-weight: 1000;
 }
 #logo {
   -ms-flex-item-align: center;
