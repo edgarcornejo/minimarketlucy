@@ -1,0 +1,279 @@
+yellowLucy = #ffea00
+orangeLucy = #f6990e
+redLucy = #e20312
+purpleLucy = #251a89
+
+html
+  height 100%
+
+/*selection*/
+::-moz-selection
+  background yellowLucy
+  text-shadow none
+
+::selection
+  background yellowLucy
+  text-shadow none
+
+/*reset hyperlink*/
+a
+  color orangeLucy
+  text-decoration none
+  &:hover
+    color redLucy
+
+.enlace-botom
+  border-radius clamp(3px, 0.2vw, 0.3vw)
+  background purpleLucy
+  color yellowLucy
+  padding clamp(16px, 1vw, 1.1vw)
+  display flex
+  flex-direction row-reverse
+  align-items center
+  justify-content center
+  gap clamp(16px, 1vw, 1.1vw)
+  transition all 0.2s ease-in-out
+  letter-spacing 1pt
+  &:hover
+    color yellowLucy
+    font-weight 700
+  span
+    font-size inherit
+    
+/*Main*/
+body
+  background-color yellowLucy
+  background-image linear-gradient(to right, rgba(246, 153, 14, 0.2), rgba(246, 153, 14, 0.2) 1vw, yellowLucy 1vw, yellowLucy)
+  background-size 2vw 100%
+  width 100%
+  height 100%
+  color purpleLucy
+  font-size 1.2vw
+  font-family "Mulish", sans-serif
+  font-optical-sizing auto
+  font-weight 500
+  font-style normal
+
+#cover
+  height 100%
+  display flex
+  justify-content center
+
+#error
+  height 100%
+  display flex
+  justify-content center
+  flex-direction column
+  h1
+    font-size clamp(68px, 8vw, 8.1vw)
+    line-height 100%
+    text-align center
+    font-weight 1000
+
+#logo
+  align-self center
+  width 40vw
+  height auto
+  
+.dowm
+  display block
+  margin 0 auto
+  width 2vw
+  height auto
+  position relative
+  top -8vh
+
+/*animation in main*/
+.floating
+  animation-name floating
+  animation-duration 1s
+  animation-iteration-count infinite
+
+@keyframes floating
+  0%
+    transform translateY(0%)  
+  50%
+    transform translateY(20%)  
+  100%
+    transform translateY(0%)
+
+/*Header*/
+header
+  text-align center
+  padding 3vw 0 3vw 0
+  background purpleLucy
+  color #f2f2f2
+  h1
+    font-size 2vw
+    font-weight 800
+    padding-bottom 1vw
+  hr
+    width 20vw
+    margin 1vw auto 1vw auto
+    height 0.1vw
+    background #f2f2f2
+  strong
+    font-size 1.2vw
+    font-style italic
+    font-weight 300
+
+/*Section styles*/
+section
+  width 90%
+  max-width 1920px
+  margin 0 auto
+  article
+    padding 6vw 0 6vw 0
+  h2
+    text-align center
+    font-size 3vw
+    border-bottom double 0.4vw purpleLucy
+    padding-bottom 1.5vw
+    font-weight 700
+  p
+    padding 2vw 0 2vw 0
+    max-width 980px
+    display block
+    margin 0 auto
+    hyphens none
+  figure
+    text-align center
+    img
+      margin 2vw auto
+      width 10vw
+
+/*section services and promotions*/
+.promos
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  align-items flex-start
+  padding-top 2vw
+  gap 2vw
+  .prom
+    background #f2f2f2
+    box-shadow 0 0 10px 2px rgba(226, 3, 18, 0.2)
+    padding 2vw
+    border-radius 0.2vw
+    width 30%
+    text-align center
+  img
+    max-width 100%
+    mix-blend-mode multiply
+    height auto
+  h3
+    font-weight 600
+    padding 1vw 0 1vw 0
+  p
+    padding 1vw 0 1vw 0
+  ul
+    border-top solid 0.2vw purpleLucy
+    padding-top 1vw
+  
+
+/*section contact*/
+ol
+  display flex
+  justify-content center
+  flex-direction column
+  align-items center
+  height auto
+  list-style none
+  padding 2vw 0 1vw 0
+  gap 1vw
+  strong
+    background redLucy
+    color yellowLucy
+    display inline-block
+    padding 1vw
+    border-radius 0.2vw 0 0 0.2vw
+    font-weight 700
+  a
+    outline solid redLucy 0.2vw
+    display inline-block
+    color redLucy
+    padding 0.8vw
+    border-radius 0 0.2vw 0.2vw 0
+    &:hover
+      padding-left 15px
+
+/*section footer*/    
+footer
+  text-align center
+  background redLucy
+  color yellowLucy
+  padding 2vw
+
+/*Responsive Design*/
+@media screen and (max-width:1024px)
+  body
+    font-size 1em
+
+  /*Header*/
+  header
+    padding 2rem 0 2rem 0
+    h1
+      font-size 1.6em
+    hr
+      width 60%
+      margin 1rem auto 1rem auto
+      height 2px
+    strong
+      font-size 1.2em
+  
+  /*Section styles*/
+  section
+    article
+      padding 4rem 0 4rem 0
+    h2
+      font-size 1.6em
+      border-bottom double 3px purpleLucy
+      padding-bottom 1.5rem
+    p
+      padding 2rem 0 2rem 0
+    figure
+      img
+        width 30%
+
+  /*section services and promotions*/
+  .promos
+    padding-top 2rem
+    .prom
+      padding 2rem
+      border-radius 3px
+    h3
+      padding 1rem 0 1rem 0
+    p
+      padding 1rem 0 1rem 0
+    ul
+      border-top solid 2px purpleLucy
+      padding-top 1rem
+
+  /*section contact*/
+  ol
+    padding 1rem 0 1rem 0
+    gap 1rem
+    strong
+      border-radius 3px 0 0 3px
+      padding 1rem
+    a
+      outline solid redLucy 2px
+      padding 14px
+      border-radius 0 3px 3px 0
+  
+  /*section footer*/    
+  footer
+    padding 2rem
+
+@media screen and (max-width:768px)
+  /*section services and promotions*/
+  .promos
+    .prom
+      width 48%
+
+@media screen and (max-width:480px)
+  /*section services and promotions*/
+  .promos
+    .prom
+      width 100%
+
